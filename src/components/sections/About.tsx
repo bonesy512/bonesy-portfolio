@@ -17,7 +17,7 @@ export function About() {
         <MotionWrapper className="col-span-1 lg:col-span-5 relative order-2 lg:order-1">
           <div className="aspect-[3/4] bg-accent rounded-xl overflow-hidden shadow-2xl">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC0tcLgRZ38m8xITtEaA4ygZMnKg3ehFWEpiyprIOgrixXYh9po3S-2fLjWcsbMRonFyQJpNpViMEPmZJIjqiyzxFVHIOryM_75iIIlV0zoDAQD_UDkn_UJ2Ub1MRDzE_cJUPl_sZf9eG46Xspt5t_Z85nKuk7Wl9kJja39BIhJIZQzNKDbFRM5hYZSL7K_lczCJNj7SGXkTYhn561hc2ZLWNOdA5YgSYc3U7CANs8gO9fjcpVfsmCrliVUtkWHkiz8iUcVuTRuXI"
+              src="/thomas-schustereit.png"
               alt="Thomas Schustereit — Senior UI/UX Designer"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"

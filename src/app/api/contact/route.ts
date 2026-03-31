@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { Resend } from "resend";
+import { ContactEmail } from "@/components/emails/ContactEmail";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+const contactEmail = process.env.CONTACT_EMAIL || "bonesy@bonesydesign.com";
+const resendDomain = process.env.RESEND_DOMAIN || "bonesydesign.com";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -21,15 +27,29 @@ export async function POST(request: NextRequest) {
 
     const { name, email, message } = result.data;
 
-    // In production, connect to email provider (e.g. Resend, SendGrid)
-    // For now, we log and return success
-    console.log("Contact form submission:", { name, email, message });
+    // Send email via Resend
+    const { error } = await resend.emails.send({
+      from: `Bonesy Design <notifications@${resendDomain}>`,
+      to: [contactEmail],
+      subject: `New Inquiry from ${name}`,
+      replyTo: email,
+      react: ContactEmail({ name, email, message }),
+    });
+
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { error: "Failed to send email" },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Message received. We'll be in touch." },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    console.error("Contact API error:", error);
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }
