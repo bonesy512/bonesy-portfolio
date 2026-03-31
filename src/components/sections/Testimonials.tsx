@@ -1,6 +1,6 @@
 "use client";
 
-import { MotionWrapper } from "../animations/MotionWrapper";
+import { GsapWrapper } from "../animations/GsapWrapper";
 import { Quote } from "lucide-react";
 
 const TESTIMONIALS = [
@@ -23,22 +23,22 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-24 px-6 md:px-12 bg-accent/10 border-y border-border/10">
+    <section id="testimonials" className="py-24 px-6 md:px-12 bg-background border-y border-border/10 overflow-hidden">
       <div className="max-w-screen-xl mx-auto">
-        <MotionWrapper className="mb-16">
+        <GsapWrapper className="mb-16">
           <span className="text-primary font-heading text-[0.6875rem] uppercase tracking-[0.4em] mb-4 block">
             Social Proof
           </span>
           <h2 className="text-4xl md:text-5xl font-heading font-extrabold tracking-tighter">
             Executive Endorsements
           </h2>
-        </MotionWrapper>
+        </GsapWrapper>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, i) => (
-            <MotionWrapper key={i} delay={i * 0.1} className="relative pt-12">
-              <Quote className="absolute top-0 left-0 w-8 h-8 text-primary/20" />
-              <p className="text-lg text-foreground/80 font-light italic leading-relaxed mb-8">
+            <GsapWrapper key={i} delay={i * 0.15} yOffset={40} className="relative pt-12 p-8 glass rounded-2xl shadow-weightless transition-all duration-500 hover:shadow-spatial hover:-translate-y-2">
+              <Quote className="absolute top-6 left-6 w-8 h-8 text-primary/20" />
+              <p className="text-lg text-foreground/70 font-light italic leading-relaxed mb-8 relative z-10">
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div>
@@ -49,7 +49,7 @@ export function Testimonials() {
                   {t.company}
                 </span>
               </div>
-            </MotionWrapper>
+            </GsapWrapper>
           ))}
         </div>
       </div>

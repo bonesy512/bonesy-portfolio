@@ -1,4 +1,6 @@
-import { MotionWrapper } from "../animations/MotionWrapper";
+"use client";
+
+import { GsapWrapper } from "../animations/GsapWrapper";
 
 const SOCIAL_LINKS = [
   { name: "X", href: "https://x.com/B0N3SYeth", active: true },
@@ -10,38 +12,42 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1c1b1b] w-full py-16 border-t border-border/20">
-      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 max-w-screen-2xl mx-auto gap-8">
-        <MotionWrapper className="flex flex-col items-center md:items-start gap-4" delay={0}>
-          <span className="text-xl font-bold text-foreground font-heading tracking-tighter">
+    <footer className="bg-background w-full py-20 border-t border-border/10 overflow-hidden">
+      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-12 max-w-screen-2xl mx-auto gap-12">
+        <GsapWrapper className="flex flex-col items-center md:items-start gap-4">
+          <span className="text-2xl font-black text-foreground font-heading tracking-tighter uppercase">
             Bonesy Design
           </span>
-          <p className="font-heading text-[0.6875rem] uppercase tracking-[0.1em] text-muted-foreground/70">
+          <p className="font-heading text-[0.6rem] uppercase tracking-[0.2em] text-muted-foreground/50">
             © <span suppressHydrationWarning>{currentYear}</span> Bonesy Design. All rights reserved.
           </p>
-        </MotionWrapper>
+        </GsapWrapper>
 
-        <MotionWrapper
-          className="flex gap-8 md:gap-12"
-          delay={0.1}
-        >
-          {SOCIAL_LINKS.filter(link => link.active).map((social) => (
-            <a
+        <div className="flex gap-10 md:gap-16">
+          {SOCIAL_LINKS.filter(link => link.active).map((social, i) => (
+            <GsapWrapper
               key={social.name}
-              href={social.href}
-              className="font-heading text-[0.6875rem] uppercase tracking-[0.2em] text-muted-foreground hover:text-primary transition-all duration-300 hover:rotate-3"
+              delay={0.1 + i * 0.1}
+              yOffset={20}
             >
-              {social.name}
-            </a>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-heading text-[0.7rem] font-bold uppercase tracking-[0.3em] text-muted-foreground hover:text-primary transition-all duration-500 hover:-translate-y-1 block hover:scale-110"
+              >
+                {social.name}
+              </a>
+            </GsapWrapper>
           ))}
-        </MotionWrapper>
+        </div>
 
-        <MotionWrapper
-          className="text-primary font-heading text-[0.6rem] tracking-[0.3em] uppercase opacity-60"
-          delay={0.2}
+        <GsapWrapper
+          className="text-primary/40 font-heading text-[0.55rem] tracking-[0.5em] uppercase text-center md:text-right"
+          delay={0.4}
         >
           Designed for Impact &amp; Authority
-        </MotionWrapper>
+        </GsapWrapper>
       </div>
     </footer>
   );

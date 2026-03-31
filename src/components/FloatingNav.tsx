@@ -1,21 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
-
 import { AnimatePresence, motion } from "framer-motion";
+import gsap from "gsap";
 
 export function FloatingNav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
+    
+    // Entrance animation for the nav
+    gsap.from(navRef.current, {
+      y: -100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+      delay: 0.5
+    });
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -51,14 +62,15 @@ export function FloatingNav() {
 
   return (
     <nav
+      ref={navRef}
       className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-500",
+        "fixed top-4 left-1/2 -translate-x-1/2 w-[90%] max-w-screen-xl z-50 transition-all duration-700 rounded-2xl",
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/40 py-4 shadow-2xl"
-          : "bg-transparent py-8"
+          ? "glass shadow-spatial py-3 px-6"
+          : "bg-transparent py-6 px-0"
       )}
     >
-      <div className="flex justify-between items-center px-6 md:px-12 max-w-screen-2xl mx-auto">
+      <div className="flex justify-between items-center max-w-screen-2xl mx-auto">
         <a
           href="#"
           className="text-xl font-heading font-black tracking-tighter text-primary hover:opacity-80 transition-opacity"
@@ -81,7 +93,7 @@ export function FloatingNav() {
             href="#contact"
             className={cn(
               buttonVariants({ variant: "default" }),
-              "rounded-xl font-bold hover:scale-105 duration-300 motion-safe:transition-transform font-heading text-[0.65rem] uppercase tracking-widest px-8"
+              "rounded-xl font-bold transition-all shadow-spatial hover:scale-105 font-heading text-[0.65rem] uppercase tracking-widest px-8 h-10"
             )}
           >
             LET&apos;S TALK
@@ -90,11 +102,11 @@ export function FloatingNav() {
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden text-primary p-2 focus:outline-none min-w-[48px] min-h-[48px] flex items-center justify-center"
+          className="md:hidden text-primary p-2 focus:outline-none min-w-[48px] min-h-[48px] flex items-center justify-center glass rounded-xl"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -106,7 +118,7 @@ export function FloatingNav() {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden absolute top-full left-0 w-full bg-background border-b border-border shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
+            className="md:hidden absolute top-full left-0 w-full mt-4 glass rounded-2xl shadow-spatial overflow-hidden border border-white/5"
           >
             <div className="flex flex-col px-8 py-12 gap-8">
               {navLinks.map((link) => (
