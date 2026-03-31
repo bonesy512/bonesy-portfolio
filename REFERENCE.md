@@ -122,5 +122,24 @@ export interface Project {
 ## 🚀 Deployment & Tech
 - **Framework**: Next.js 16 (App Router)
 - **Styling**: Tailwind CSS v4
-- **Animations**: Framer Motion
-- **Interactions**: Base UI / Radix (via Shadcn)
+- **Animations**: GSAP (High-performance scroll/stagger)
+- **Theme**: Antigravity Design (Weightless, Spatial, Glass)
+- **Interactions**: MagneticWrapper / CustomCursor
+
+---
+
+## 🤖 Agentic Orchestration
+
+This repository is optimized for autonomous agentic workflows.
+
+### Antigravity Skill Orchestrator
+**File**: `.agent/workflows/antigravity-skill-orchestrator.md`
+**Usage**: `implement @[/antigravity-skill-orchestrator]`
+**Description**: A meta-skill that evaluates task complexity and coordinates specialized skills (e.g., UX, Backend, Security) using persistent memory.
+
+### Persistent Memory (agentMemory)
+**Location**: `.agentMemory/` (Managed by `agent-memory-mcp`)
+**Capabilities**:
+- **Search**: `memory_search` for pattern discovery.
+- **Write**: `memory_write` to record architecture decisions and skill combinations.
+- **Read**: `memory_read` to retrieve specific context.
