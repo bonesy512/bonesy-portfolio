@@ -20,6 +20,7 @@ export function About() {
               src="/thomas-schustereit.png"
               alt="Thomas Schustereit — Senior UI/UX Designer"
               fill
+              priority
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="object-cover grayscale brightness-75 contrast-125"
             />

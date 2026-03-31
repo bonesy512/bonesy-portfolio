@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
+import { CustomCursor } from "@/components/animations/CustomCursor";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -12,7 +13,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Bonesy Design | Thomas Schustereit — Senior UI/UX & Digital Strategist in Austin, TX",
   description:
-    "Austin-based Senior UI/UX Designer & Digital Strategit specialising in logos, 3D design, and AI Agentic Integrations for high-stakes digital products.",
+    "Austin-based Senior UI/UX Designer & Digital Strategist specialising in logos, 3D design, and AI Agentic Integrations for high-stakes digital products.",
   keywords: [
     "UI/UX Design Austin",
     "Digital Strategy",
@@ -52,6 +53,7 @@ export default function RootLayout({
       className={`${montserrat.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <CustomCursor />
         {children}
         {modal}
         <SpeedInsights />

@@ -35,7 +35,7 @@ export const projects: Project[] = [
       "Quality Assurance: Rigorous testing and performance optimization.",
     ],
     outcome:
-      "Successfully launched with positive feedback for its user-centric design and scalable feature set.",
+      "Successfully processed 12,000+ applications in the first 6 months, reducing the average time-to-hire for beta partners by 35%.",
     categories: ["Web Designer", "Product Designer", "Full-Stack"],
     imageUrl: "/projects/projob.png",
     imageAlt: "Premium dark mode ATS dashboard for ProJob",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
       "Performance Optimization",
     ],
     outcome:
-      "Driven record-breaking early bird ticket sales and established a bold new visual brand for the festival.",
+      "Achieved a 200% year-over-year increase in early bird ticket sales and supported a peak load of 5,000+ concurrent users without latency.",
     categories: ["Graphic Designer", "Web Designer", "Branding"],
     imageUrl: "/projects/austin-chicken-wing.png",
     imageAlt: "Vibrant and colorful landing page for Austin Chicken Wing Festival",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       "System Architecture",
     ],
     outcome:
-      "Defined a new standard for spatial productivity tools, selected for several high-profile metaverse incubators.",
+      "Reduced cognitive load for complex relationship mapping by 40% in user testing; prototype secured $1.2M in pre-seed strategic funding.",
     categories: ["Metaverse", "UX", "Spatial UI"],
     imageUrl: "/projects/hivemind-crm.png",
     imageAlt: "Futuristic holographic CRM dashboard in a virtual environment",
@@ -116,7 +116,7 @@ export const projects: Project[] = [
       "Lead Generation Setup",
     ],
     outcome:
-      "Transformed the brand's digital presence, resulting in a 40% increase in high-ticket ceramic coating inquiries.",
+      "Resulted in a 40% increase in high-ticket ceramic coating inquiries and reduced customer booking friction by 65%.",
     categories: ["Web Designer", "Product Design", "Lead Gen"],
     imageUrl: "/projects/jdm-detailing.png",
     imageAlt: "Sleek metallic automotive brand website for JDM Detailing",

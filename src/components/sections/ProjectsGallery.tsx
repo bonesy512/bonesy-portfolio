@@ -20,7 +20,7 @@ export function ProjectsGallery() {
           <div className="hidden md:block h-px flex-1 bg-border/50 mx-12 mb-4" />
           <MotionWrapper delay={0.1} className="text-left md:text-right">
             <span className="text-muted-foreground font-light text-sm uppercase tracking-widest">
-              EST. 2018 — 2024
+              EST. 2012 — 2024
             </span>
           </MotionWrapper>
         </div>
@@ -39,6 +39,7 @@ export function ProjectsGallery() {
                     alt={project.imageAlt}
                     src={project.imageUrl}
                     fill
+                    priority={index === 0}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-[transform,filter] duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
                   />

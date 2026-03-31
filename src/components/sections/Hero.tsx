@@ -1,6 +1,7 @@
 "use client";
 
 import { MotionWrapper } from "../animations/MotionWrapper";
+import { MagneticWrapper } from "../animations/MagneticWrapper";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -33,17 +34,33 @@ export function Hero() {
             the absence of friction. I help founders and creative directors replace digital
             noise with strategic authority.
           </p>
-          <div className="flex flex-wrap gap-6">
-            <a
-              href="#projects"
-              className={cn(
-                buttonVariants({ size: "lg", variant: "default" }),
-                "group text-primary-foreground font-bold px-10 py-8 rounded-xl transition-[box-shadow,transform] hover:shadow-[0_0_30px_-5px_rgba(242,202,80,0.4)] tracking-widest uppercase inline-flex items-center gap-3"
-              )}
-            >
-              VIEW PROJECTS
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 motion-safe:transition-transform" />
-            </a>
+          <div className="flex flex-wrap gap-12 items-center mt-12 overflow-visible">
+            <MagneticWrapper>
+              <a
+                href="#projects"
+                className={cn(
+                  buttonVariants({ size: "lg", variant: "default" }),
+                  "group text-primary-foreground font-bold px-10 py-8 rounded-xl transition-[box-shadow,transform] shadow-2xl hover:shadow-primary/20 tracking-[0.2em] uppercase inline-flex items-center gap-3 relative overflow-hidden"
+                )}
+              >
+                VIEW EXHIBITION
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 motion-safe:transition-transform" />
+              </a>
+            </MagneticWrapper>
+          </div>
+
+          {/* Trusted By / Authority Bar */}
+          <div className="mt-24 pt-12 border-t border-border/10">
+            <p className="text-[0.6rem] uppercase tracking-[0.4em] text-muted-foreground/40 mb-8 font-heading">
+              Strategic Partnerships & Digital Standards
+            </p>
+            <div className="flex flex-wrap gap-x-12 gap-y-8 opacity-20 grayscale hover:grayscale-0 hover:opacity-50 transition-all duration-500">
+              {['AUSTIN FESTIVALS', 'TECH IN', 'HIVEMIND CRM', 'PROJOB', 'JDM DETAILING'].map((client) => (
+                <span key={client} className="text-xs font-heading font-black tracking-[0.2em]">
+                  {client}
+                </span>
+              ))}
+            </div>
           </div>
         </MotionWrapper>
       </div>
