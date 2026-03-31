@@ -1,0 +1,21 @@
+
+> bonesy-portfolio@0.1.0 build
+> next build
+
+Γû▓ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 1936ms
+  Running TypeScript ...
+  Finished TypeScript in 2.3s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/4) ...
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: Attempted to call buttonVariants() from the server but buttonVariants is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+    at <unknown> (E:\Projects\bonesy design\bonesy-portfolio\.next\server\chunks\ssr\_0fpzpcg._.js:1:1287)
+    at j (E:\Projects\bonesy design\bonesy-portfolio\.next\server\chunks\ssr\_0lm_n0h._.js:1:5346)
+    at stringify (<anonymous>) {
+  digest: '378967914'
+}
+Export encountered an error on /page: /, exiting the build.
+Γ¿» Next.js build worker exited with code: 1 and signal: null
