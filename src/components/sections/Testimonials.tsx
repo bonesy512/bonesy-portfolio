@@ -5,17 +5,17 @@ import { Quote } from "lucide-react";
 
 const TESTIMONIALS = [
   {
-    quote: "Thomas doesn't just design interfaces; he architected our entire digital presence. His ability to blend high-end aesthetics with rigid functional logic is unparalleled.",
+    quote: "Thomas doesn't just design interfaces; he architects entire digital ecosystems. His ability to blend high-end aesthetics with Agentic AI logic is a game-changer for our workflow.",
     author: "Director of Operations",
     company: "ProJob.io",
   },
   {
-    quote: "The 'Silent Authority' approach is real. He stripped away the noise from our CRM and left us with a product that finally feels as premium as our service.",
+    quote: "14 years of experience shows in every decision. Thomas stripped away the noise from our brand and left us with a product that finally feels as premium as our service.",
     author: "Founding Partner",
     company: "Hivemind CRM",
   },
   {
-    quote: "Precision and professionalism. Thomas delivered a brand identity and exhibition site that set a new standard for our industry festival.",
+    quote: "Precision and professionalism. Thomas delivered a brand identity and marketing strategy that set a new standard for our flagship projects in Austin.",
     author: "Executive Producer",
     company: "Austin Chicken Wing Festival",
   }
@@ -52,6 +52,12 @@ export function Testimonials() {
             </GsapWrapper>
           ))}
         </div>
+
+        <GsapWrapper delay={0.5} className="mt-16 text-center">
+          <p className="text-muted-foreground/40 font-heading text-[0.6rem] uppercase tracking-[0.3em]">
+            Delivering Strategic Project Leadership since 2012.
+          </p>
+        </GsapWrapper>
       </div>
     </section>
   );

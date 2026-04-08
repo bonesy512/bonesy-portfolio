@@ -1,16 +1,12 @@
-import { projects } from "@/data/projects";
-import { notFound } from "next/navigation";
-import { ProjectModal } from "@/components/ProjectModal";
+import { redirect } from "next/navigation";
 
+// Interceptor disabled — project cards now navigate to full-page detail views.
+// Redirect any intercepted route straight to the real page.
 export default async function ProjectInterceptPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const project = projects.find((p) => p.id === id);
-
-  if (!project) notFound();
-
-  return <ProjectModal project={project} />;
+  redirect(`/projects/${id}`);
 }

@@ -118,7 +118,7 @@ export function ProjectModal({ project }: { project: Project }) {
                     The Objective
                   </h3>
                   <p className="text-sm text-foreground/80 font-light leading-relaxed mb-6">
-                    Executing the "Silent Authority" aesthetic to create a deeply engaging UI, 
+                    Executing the "Silent Authority" aesthetic to create a deeply engaging UI,
                     blending extreme minimalism with precise, intentional friction points.
                   </p>
 
@@ -126,7 +126,7 @@ export function ProjectModal({ project }: { project: Project }) {
                     The Outcome
                   </h3>
                   <p className="text-sm text-foreground/80 font-light leading-relaxed">
-                    Elevated positioning, increased user trust signals, and a distinctive brand 
+                    Elevated positioning, increased user trust signals, and a distinctive brand
                     silhouette in a crowded digital landscape.
                   </p>
                 </>

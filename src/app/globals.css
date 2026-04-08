@@ -70,10 +70,9 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased selection:bg-primary selection:text-primary-foreground;
-    perspective: 1200px;
   }
 
   html {
@@ -85,13 +84,17 @@
   .glass {
     @apply bg-card/60 backdrop-blur-xl border border-white/10;
   }
-  
+
   .glass-primary {
     @apply bg-primary/10 backdrop-blur-md border border-primary/20;
   }
 
   .perspective-1000 {
     perspective: 1000px;
+  }
+
+  .perspective-container {
+    perspective: 1200px;
   }
 
   .preserve-3d {

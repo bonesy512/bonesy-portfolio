@@ -16,14 +16,14 @@ export default async function ProjectPage({
   if (!project) notFound();
 
   return (
-    <main className="min-h-screen bg-background text-foreground py-24 px-6 md:px-12 max-w-screen-xl mx-auto">
+    <main className="min-h-screen bg-background text-foreground py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <MotionWrapper delay={0}>
         <Link
           href="/#projects"
           className="mb-12 inline-flex items-center text-[0.65rem] uppercase tracking-[0.3em] font-medium hover:text-primary transition-colors opacity-60 hover:opacity-100 group"
         >
-          <ArrowLeft className="mr-3 w-3 h-3 group-hover:-translate-x-1 transition-transform" /> 
-          Back to Exhibition
+          <ArrowLeft className="mr-3 w-3 h-3 group-hover:-translate-x-1 transition-transform" />
+          Back to Projects
         </Link>
       </MotionWrapper>
 
@@ -129,9 +129,9 @@ export default async function ProjectPage({
           className="inline-flex items-center text-[0.7rem] uppercase tracking-[0.4em] font-bold text-foreground/50 hover:text-primary transition-all group"
         >
           <ArrowLeft className="mr-4 w-4 h-4 group-hover:-translate-x-2 transition-transform" />
-          Back to Exhibition
+          Back to Projects
         </Link>
-        
+
         <Link
           href="/#contact"
           className="text-primary font-heading text-xl md:text-2xl font-black uppercase tracking-[0.4em] hover:opacity-70 transition-opacity"

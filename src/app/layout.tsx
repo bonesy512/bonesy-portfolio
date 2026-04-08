@@ -11,32 +11,33 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Bonesy Design | Thomas Schustereit — Senior UI/UX & Digital Strategist in Austin, TX",
+  title: "Bonesy Design | Thomas Schustereit — 14 Years of Digital Excellence in Austin, TX",
   description:
-    "Austin-based Senior UI/UX Designer & Digital Strategist specialising in logos, 3D design, and AI Agentic Integrations for high-stakes digital products.",
+    "Founded by Thomas Schustereit, Bonesy Design is an Austin-based studio specializing in Web Design, Graphic Branding, Agentic AI, and App Development.",
   keywords: [
-    "UI/UX Design Austin",
-    "Digital Strategy",
-    "Product Design",
-    "AI Agentic Integrations",
-    "3D Design",
-    "IT Consulting Austin",
-    "Logo Design Texas",
     "Bonesy Design",
     "Thomas Schustereit",
+    "UI/UX Design Austin",
+    "Agentic AI Integrations",
+    "Custom App Development",
+    "Graphic Design Texas",
+    "Social Media Marketing Austin",
+    "Website Design 14 Years Experience",
+    "Digital Strategy",
   ],
   openGraph: {
-    title: "Bonesy Design | Thomas Schustereit — Austin, TX",
+    title: "Bonesy Design | Expert Digital Craft by Thomas Schustereit",
     description:
-      "Senior UI/UX & Digital Strategist architecting high-stakes digital products, AI Agentic Integrations, and 3D experiences in Austin, TX.",
+      "14 years of high-stakes design and development. Specializing in websites, branding, and Agentic AI integrations for modern businesses.",
     type: "website",
     locale: "en_US",
+    url: "https://bonesy.design", // Ensure this matches your actual URL
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bonesy Design | Thomas Schustereit — Austin, TX",
+    title: "Bonesy Design | Thomas Schustereit",
     description:
-      "Senior UI/UX & Digital Strategist architecting high-stakes digital products, AI Agentic Integrations, and 3D experiences in Austin, TX.",
+      "Bridging the gap between timeless design and future-tech. 14 years of Web, App, and AI expertise in Austin, TX.",
   },
 };
 
