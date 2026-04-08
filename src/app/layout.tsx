@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { CustomCursor } from "@/components/animations/CustomCursor";
+import { Footer } from "@/components/sections/Footer";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -57,6 +58,7 @@ export default function RootLayout({
         <CustomCursor />
         {children}
         {modal}
+        <Footer />
         <SpeedInsights />
         <Analytics />
       </body>

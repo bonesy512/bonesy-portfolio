@@ -4,7 +4,6 @@ import { ProjectsGallery } from "@/components/sections/ProjectsGallery";
 import { About } from "@/components/sections/About";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Contact } from "@/components/sections/Contact";
-import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -24,7 +23,6 @@ export default function Home() {
         <Testimonials />
         <Contact />
       </main>
-      <Footer />
     </>
   );
 }

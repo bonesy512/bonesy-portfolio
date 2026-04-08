@@ -37,7 +37,7 @@ export const projects: Project[] = [
     outcome:
       "Successfully processed 12,000+ applications in the first 6 months, reducing the average time-to-hire for beta partners by 35%.",
     categories: ["Web Designer", "Product Designer", "Full-Stack"],
-    imageUrl: "/projects/projob.png",
+    imageUrl: "/Signature-File.png",
     imageAlt: "Premium dark mode ATS dashboard for ProJob",
     gridClass: "md:col-span-8",
     aspectClass: "aspect-[16/9]",

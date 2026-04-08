@@ -20,7 +20,7 @@ export function About() {
         <GsapWrapper parallax={true} yOffset={50} className="col-span-1 lg:col-span-5 relative order-2 lg:order-1 perspective-1000">
           <div className="aspect-[3/4] bg-accent rounded-2xl overflow-hidden shadow-spatial preserve-3d transition-transform duration-700 hover:scale-[1.02]">
             <Image
-              src="/thomas-schustereit.png"
+              src="/meinasuit.jpg"
               alt="Thomas Schustereit — Founder of Bonesy Design"
               fill
               priority
@@ -31,7 +31,7 @@ export function About() {
           <GsapWrapper delay={0.5} yOffset={20} className="absolute -bottom-8 -right-8 p-10 glass rounded-2xl shadow-spatial hidden md:block border-white/5">
             <span className="font-heading font-black text-5xl block text-center text-primary">14</span>
             <p className="text-[0.65rem] text-muted-foreground uppercase tracking-[0.2em] font-bold mt-2 text-center">
-              Years <br /> Operations
+              Years of <br /> Experience
             </p>
           </GsapWrapper>
         </GsapWrapper>

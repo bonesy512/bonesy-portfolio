@@ -1,9 +1,16 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, CheckCircle2, UserCircle } from "lucide-react";
 import { MotionWrapper } from "@/components/animations/MotionWrapper";
 import { Badge } from "@/components/ui/badge";
+
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    id: project.id,
+  }));
+}
 
 export default async function ProjectPage({
   params,
@@ -58,11 +65,14 @@ export default async function ProjectPage({
         </div>
 
         {/* Project Hero Image */}
-        <MotionWrapper delay={0.3} className="aspect-video w-full overflow-hidden rounded-2xl shadow-3xl bg-accent">
-          <img
+        <MotionWrapper delay={0.3} className="aspect-video w-full overflow-hidden rounded-2xl shadow-3xl bg-accent relative">
+          <Image
             src={project.imageUrl}
             alt={project.imageAlt}
-            className="w-full h-full object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700"
+            fill
+            priority
+            className="object-cover grayscale brightness-75 hover:grayscale-0 transition-all duration-700"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </MotionWrapper>
       </div>
@@ -103,7 +113,7 @@ export default async function ProjectPage({
                 </div>
                 <div className="flex flex-wrap gap-3">
                   {project.role.map((r, i) => (
-                    <Badge key={i} variant="outline" className="border-primary/20 text-foreground/60 text-[0.6rem] uppercase tracking-widest px-4 py-1">
+                    <Badge key={i} variant="outline" className="h-auto whitespace-normal border-primary/20 text-foreground/60 text-[0.65rem] md:text-[0.6rem] uppercase tracking-widest px-4 py-2 leading-relaxed text-left">
                       {r}
                     </Badge>
                   ))}
